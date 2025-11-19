@@ -1,0 +1,42 @@
+<!-- فایل: page2.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پروفایل کاربری</title>
+<style>
+body { font-family: Tahoma,sans-serif; background:#f1f8e9; color:#222; padding:20px; text-align:center;}
+label, input, button { display:block; margin:15px auto; font-size:18px; }
+img { width:100px; height:100px; border-radius:50%; margin-top:20px; cursor:pointer; }
+button { padding:10px 20px; border:none; background:#1976d2; color:white; border-radius:8px; cursor:pointer; }
+button:hover { background:#0d47a1; }
+</style>
+</head>
+<body>
+
+<h2>ثبت اطلاعات کاربری</h2>
+
+<img id="profileImg" src="default.png" alt="پروفایل">
+
+<label>نام:</label>
+<input type="text" id="firstName" placeholder="نام خود را وارد کنید">
+
+<label>نام خانوادگی:</label>
+<input type="text" id="lastName" placeholder="نام خانوادگی خود را وارد کنید">
+
+<button onclick="saveProfile()">ذخیره و ادامه</button>
+
+<script>
+function saveProfile(){
+    let first = document.getElementById('firstName').value.trim();
+    let last = document.getElementById('lastName').value.trim();
+    if(!first || !last){ alert('نام و نام خانوادگی را وارد کنید'); return; }
+    localStorage.setItem('firstName', first);
+    localStorage.setItem('lastName', last);
+    window.location.href = 'page3.html';
+}
+</script>
+
+</body>
+</html>

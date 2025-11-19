@@ -1,0 +1,39 @@
+<!-- فایل: page4.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>انجام عملیات ریاضی</title>
+<style>
+body { font-family: Tahoma,sans-serif; background:#e8f5e9; padding:20px; text-align:center; }
+button { padding:10px 20px; border:none; background:#1976d2; color:white; border-radius:8px; margin:10px; cursor:pointer;}
+button:hover{background:#0d47a1;}
+select,input{font-size:16px; padding:8px; margin:10px 0;}
+.result-box { background:white; border-radius:10px; padding:15px; margin-top:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+</style>
+</head>
+<body>
+
+<h2>انجام عملیات ریاضی روی مجموعه‌ها</h2>
+
+<label>چگونه اعضا نمایش داده شود؟</label>
+<select id="displayType">
+<option value="math">نماد ریاضی</option>
+<option value="list">نوشتن اعضا</option>
+</select>
+
+<div id="memberBox" class="result-box"></div>
+
+<button onclick="showOperations()">نمایش محاسبه</button>
+
+<script>
+function showOperations(){
+  let display = document.getElementById('displayType').value;
+  let box = document.getElementById('memberBox');
+  if(display==='list'){ box.innerText="{1,2,3,...}"; }
+  else { box.innerText="{ x ∈ A | x ≥ 1 }"; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- فایل: page1.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آزمایشگاه مجموعه‌ها</title>
+<style>
+body { font-family: Tahoma,sans-serif; background:#e3f2fd; color:#222; padding:20px; text-align:center;}
+h1 { font-size: 36px; color:#0d47a1; margin-top:50px; }
+.symbols { font-size:48px; margin-top:40px; display:flex; justify-content:center; gap:20px;}
+.symbol { animation: bounce 1s infinite alternate; cursor:pointer;}
+@keyframes bounce { from{transform: translateY(0);} to{transform: translateY(-20px);} }
+</style>
+</head>
+<body>
+
+<h1>آزمایشگاه مجموعه‌ها</h1>
+<div class="symbols">
+<span class="symbol">+</span>
+<span class="symbol">-</span>
+<span class="symbol">×</span>
+<span class="symbol">÷</span>
+</div>
+
+<script>
+// بعد از 3 ثانیه منتقل شود به صفحه 2
+setTimeout(()=>{ window.location.href = 'page2.html'; }, 3000);
+</script>
+
+</body>
+</html>
